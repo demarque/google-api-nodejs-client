@@ -1,4 +1,4 @@
-// Copyright 2012-2016, Google, Inc.
+// Copyright 2018, Google, LLC.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -13,22 +13,17 @@
 
 /*! THIS FILE IS AUTO-GENERATED */
 
-import {getAPI, ServiceOptions} from 'googleapis-common';
+import {getAPI, GoogleConfigurable} from 'googleapis-common';
+import {bookspartner_v1} from './v1';
 
-import * as bookspartner from './bookspartner';
-
-export interface APIList {
-  // tslint:disable-next-line: no-any
-  [index: string]: {[index: string]: any};
-}
-
-export const APIS: APIList = {
-  bookspartner: bookspartner.VERSIONS,
+export const VERSIONS = {
+  'v1': bookspartner_v1.Bookspartner,
 };
 
-export class GeneratedAPIs {
-  bookspartner = bookspartner.bookspartner;
-  constructor() {
-    this.bookspartner = this.bookspartner.bind(this);
-  }
+export function bookspartner(version: 'v1'): bookspartner_v1.Bookspartner;
+export function bookspartner(options: bookspartner_v1.Options):
+    bookspartner_v1.Bookspartner;
+export function bookspartner<T = bookspartner_v1.Bookspartner>(
+    this: GoogleConfigurable, versionOrOptions: 'v1'|bookspartner_v1.Options) {
+  return getAPI<T>('bookspartner', versionOrOptions, VERSIONS, this);
 }
