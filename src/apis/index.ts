@@ -13,22 +13,22 @@
 
 /*! THIS FILE IS AUTO-GENERATED */
 
-import {getAPI, ServiceOptions} from 'googleapis-common';
+import { ServiceOptions, getAPI } from 'googleapis-common';
 
-import * as bookspartner from './bookspartner';
+  import * as bookspartner from './bookspartner';
 
 export interface APIList {
   // tslint:disable-next-line: no-any
-  [index: string]: {[index: string]: any};
+  [index: string]: { [index: string]: any };
 }
 
 export const APIS: APIList = {
-  bookspartner: bookspartner.VERSIONS,
-};
+      bookspartner: bookspartner.VERSIONS,
+  };
 
 export class GeneratedAPIs {
-  bookspartner = bookspartner.bookspartner;
-  constructor() {
-    this.bookspartner = this.bookspartner.bind(this);
-  }
+      bookspartner = bookspartner.bookspartner;
+    constructor() {
+          this.bookspartner = this.bookspartner.bind(this);
+      }
 }

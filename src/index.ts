@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-/*! THIS FILE IS AUTO-GENERATED */
+ /*! THIS FILE IS AUTO-GENERATED */
 
 import {GoogleApis} from './googleapis';
 const google = new GoogleApis();
 export {google, GoogleApis};
 
-export {bookspartner_v1} from './apis/bookspartner/v1';
+  export { bookspartner_v1 } from './apis/bookspartner/v1';

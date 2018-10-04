@@ -14,16 +14,14 @@
 /*! THIS FILE IS AUTO-GENERATED */
 
 import {getAPI, GoogleConfigurable} from 'googleapis-common';
-import {bookspartner_v1} from './v1';
+  import { bookspartner_v1 } from './v1';
 
 export const VERSIONS = {
-  'v1': bookspartner_v1.Bookspartner,
-};
+      'v1': bookspartner_v1.Bookspartner,
+  };
 
-export function bookspartner(version: 'v1'): bookspartner_v1.Bookspartner;
-export function bookspartner(options: bookspartner_v1.Options):
-    bookspartner_v1.Bookspartner;
-export function bookspartner<T = bookspartner_v1.Bookspartner>(
-    this: GoogleConfigurable, versionOrOptions: 'v1'|bookspartner_v1.Options) {
+    export function bookspartner(version: 'v1'): bookspartner_v1.Bookspartner;
+  export function bookspartner(options: bookspartner_v1.Options): bookspartner_v1.Bookspartner;
+export function bookspartner<T = bookspartner_v1.Bookspartner>(this: GoogleConfigurable, versionOrOptions: 'v1'|bookspartner_v1.Options) {
   return getAPI<T>('bookspartner', versionOrOptions, VERSIONS, this);
 }
