@@ -1,6 +1,7 @@
 [Original](https://github.com/googleapis/google-api-nodejs-client)
 
-Customized googleapis npm package.
+googleapis npm package customized so that we can choose which APIs and add non
+public APIs such as the bookspartner one.
 
 To add new APIs, edit the apis.json file, and run
 
