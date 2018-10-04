@@ -9,7 +9,7 @@ To add new APIs, edit the apis.json file, and run
 npm run generate && npm run compile 
 ```
 
-You can pack the library (```npm package```) and install it in your project
+You can pack the library (```npm pack```) and install it in your project
 (i.e. ```npm install --save ./vendors/demarque-googleapis-34.0.0.tgz```)
 
 Example of use:
