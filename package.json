@@ -2,8 +2,7 @@
   "nyc": {
     "exclude": [
       "build/src/apis",
-      "build/test",
-      "samples"
+      "build/test"
     ]
   },
   "license": "Apache-2.0",
@@ -19,7 +18,7 @@
     "package.json"
   ],
   "repository": "google/google-api-nodejs-client",
-  "name": "googleapis",
+  "name": "@demarque/googleapis",
   "contributors": [
     {
       "email": "jbd@google.com",
@@ -52,22 +51,15 @@
   ],
   "version": "34.0.0",
   "scripts": {
-    "pretest": "npm run compile",
     "prepare": "npm run compile",
-    "test": "nyc mocha build/test",
+    "test": "",
     "docs": "echo no docs 👻",
-    "system-test": "mocha build/system-test",
-    "samples-test": "cd samples && npm link ../ && pwd && npm test",
-    "lint": "gts check && eslint 'samples/**/*.js'",
+    "lint": "gts check",
     "compile": "tsc -v && tsc -p . && copyfiles src/apis/**/README.md src/apis/**/package.json build",
     "build-tools": "tsc -p tsconfig.tools.json",
     "clean": "gts clean",
-    "codecov": "nyc --cache mocha build/test -t 10000 -S -R spec && nyc report --reporter=html",
-    "fix": "eslint --fix 'samples/**/*.js' && prettier --write samples/**/*.js && gts fix",
     "pregenerate": "npm run build-tools",
-    "generate": "node build/src/generator/generate.js",
-    "postgenerate": "npm run fix",
-    "prettier": "prettier --write samples/**/*.js"
+    "generate": "node build/src/generator/generate.js"
   },
   "author": "Google Inc.",
   "keywords": [
