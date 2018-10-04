@@ -178,9 +178,12 @@ export class Generator {
    * Generate all APIs and write to files.
    */
   async generateAllAPIs() {
-    const headers = this.options.includePrivate ? {} : {'X-User-Ip': '0.0.0.0'};
-    const res = await this.request<Schemas>({url: DISCOVERY_URL, headers});
-    const apis = res.data.items;
+    // const headers = this.options.includePrivate ? {} : {'X-User-Ip':
+    // '0.0.0.0'}; const res = await this.request<Schemas>({url: DISCOVERY_URL,
+    // headers});
+    const contents = fs.readFileSync('./apis.json', 'utf8');
+    const apis = (JSON.parse(contents) as Schemas).items;
+    // const apis = res.data.items;
     const queue = new Q({concurrency: 10});
     console.log(`Generating ${apis.length} APIs...`);
     queue.addAll(apis.map(api => {
